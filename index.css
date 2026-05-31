@@ -1322,6 +1322,156 @@ body {
 }
 
 /* ==========================================================================
+   NOTABLE LUMINARIES SECTION
+   ========================================================================== */
+
+.luminaries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.luminaries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.luminary-card {
+  background: linear-gradient(135deg, rgba(8, 26, 18, 0.7) 0%, rgba(4, 18, 12, 0.85) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 15px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.luminary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold-metallic), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 15px 15px 0 0;
+}
+
+.luminary-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-metallic);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+.luminary-card:hover::before {
+  opacity: 1;
+}
+
+.luminary-badge-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold-metallic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.luminary-badge-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.luminary-card:hover .luminary-badge-icon {
+  background: var(--gold-metallic);
+  transform: scale(1.1);
+}
+
+.luminary-card:hover .luminary-badge-icon svg {
+  stroke: var(--charcoal-bg);
+}
+
+.luminary-tag {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.tag-commerce {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.tag-activism {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}
+
+.tag-enterprise {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.tag-scholarship {
+  background: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+  border: 1px solid rgba(155, 89, 182, 0.2);
+}
+
+.tag-science {
+  background: rgba(26, 188, 156, 0.1);
+  color: #1abc9c;
+  border: 1px solid rgba(26, 188, 156, 0.2);
+}
+
+.tag-education {
+  background: rgba(241, 196, 15, 0.1);
+  color: #f1c40f;
+  border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.luminary-name {
+  font-family: var(--font-title);
+  color: var(--marble-cream);
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.luminary-era {
+  font-size: 0.8rem;
+  color: var(--gold-metallic);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.luminary-bio {
+  font-size: 0.9rem;
+  color: rgba(245, 242, 235, 0.75);
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+/* ==========================================================================
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
@@ -1431,5 +1581,18 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .luminaries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .luminaries-container {
+    padding: 0 1rem;
+  }
+
+  .luminary-card {
+    padding: 2rem 1.5rem;
   }
 }
