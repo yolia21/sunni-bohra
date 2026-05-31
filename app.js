@@ -467,6 +467,98 @@ document.addEventListener('DOMContentLoaded', () => {
           </ul>
         </div>
       `
+    },
+    'hafiz-patel': {
+      name: 'Hafiz Patel',
+      tag: 'Islamic Scholarship',
+      era: '1926 – 2016 &bull; United Kingdom',
+      img: 'hafiz_patel.jpg',
+      bio: `
+        <p><strong>Hafiz Patel</strong> (born Habib Patel) was one of the most influential and respected British Muslim religious leaders of the 20th century. He was a pioneer in establishing the Tablighi Jamaat movement in the United Kingdom and across Europe, transforming Dewsbury and Blackburn into major global centers of spiritual guidance and education.</p>
+        <p>Born in the Surat district of Gujarat, India, Hafiz Patel migrated to the UK in the early 1960s, joining the early waves of South Asian Muslim textile and factory workers who settled in the industrial towns of Yorkshire and Lancashire.</p>
+        <div class="modal-bio-section-title">Founding the Dewsbury Markaz</div>
+        <p>Recognizing the spiritual and cultural challenges faced by the newly arrived migrant communities, Hafiz Patel dedicated his life to community organizing and religious education. In Dewsbury, West Yorkshire, he spearheaded the construction of the massive Markazi Mosque (Dewsbury Markaz) and its associated Islamic seminary (Darul Uloom Dewsbury), which became one of the first major traditional Islamic boarding schools in Western Europe.</p>
+        <div class="modal-bio-section-title">Global Legacy</div>
+        <p>Hafiz Patel was renowned for his simple, ascetic lifestyle, his humility, and his tireless travel to advise and counsel communities across the UK, Europe, and the world. His funeral in Dewsbury in 2016 was attended by an estimated 20,000 people from all over the world, representing one of the largest gatherings of its kind in British history, signifying his immense impact on the diaspora.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Co-founded the Dewsbury Markaz and Darul Uloom Dewsbury in West Yorkshire.</li>
+            <li>Pioneered the establishment of Tablighi Jamaat across the UK and Europe.</li>
+            <li>Helped set up community and educational structures supporting British Gujarati Muslims.</li>
+            <li>Renowned globally for pastoral care, inter-community peace, and simple living.</li>
+          </ul>
+        </div>
+      `
+    },
+    'major-atchia': {
+      name: 'Major Amode Ibrahim Atchia',
+      tag: 'Innovation & Philanthropy',
+      era: '1860 – 1947 &bull; Mauritius',
+      img: 'major_atchia.png',
+      bio: `
+        <p><strong>Major Amode Ibrahim Atchia</strong> (also known as Major Atchia) was a legendary Mauritian pioneer, inventor, and philanthropist. He is celebrated as one of Mauritius's greatest historical figures of industrial innovation, bringing hydro-electric power and advanced technology to the Indian Ocean island nation.</p>
+        <p>Atchia's ancestors were Surti Sunni Bohras who migrated from the Surat district of South Gujarat to Mauritius in the 19th century, establishing a prominent trading family in Rose-Hill.</p>
+        <div class="modal-bio-section-title">Pioneering Mauritian Electrification</div>
+        <p>Atchia studied engineering and industrial mechanics, demonstrating a brilliant aptitude for innovation. In the late 19th century, he founded the Reduit Hydro-Electric Power Station, introducing green, renewable electricity to Mauritius for the first time. He went on to introduce modern steam traction engines, ice factories, and mechanized timber mills, revolutionizing the island's infrastructure and sugar-based economy.</p>
+        <div class="modal-bio-section-title">Philanthropy and Civic Leadership</div>
+        <p>Deeply committed to social welfare, Major Atchia funded the construction of the Rose Hill Sunni Mosque, established local schools, and donated large tracts of land for public parks and community centers. During World War I, he organized Mauritian volunteer forces, earning him the honorary military rank of "Major" and wide-scale civil acclaim.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Introduced hydro-electric power generation to Mauritius in the late 19th century.</li>
+            <li>Established the first ice factories and mechanized timber mills on the island.</li>
+            <li>Funded the construction of the Rose Hill Sunni Mosque and local schools.</li>
+            <li>Honored as a military Major and widely celebrated Mauritian national pioneer.</li>
+          </ul>
+        </div>
+      `
+    },
+    'ahmed-deedat': {
+      name: 'Ahmed Deedat',
+      tag: 'Comparative Dawah',
+      era: '1918 – 2005 &bull; South Africa',
+      img: 'ahmed_deedat.jpg',
+      bio: `
+        <p><strong>Ahmed Hoosen Deedat</strong> was a world-renowned South African self-taught Islamic scholar, writer, and orator. He is famous globally for his public debates on comparative religion and his role in establishing modern Dawah (Islamic outreach) movements.</p>
+        <p>Deedat was born in Tadkeshwar, Surat district, Gujarat, India. His father, a tailor, migrated to South Africa shortly after Ahmed's birth. Ahmed joined him in Durban in 1927, experiencing firsthand the hardships of early Gujarati migrant families under Apartheid segregation.</p>
+        <div class="modal-bio-section-title">Rise to Oratorical Prominence</div>
+        <p>Working in a local store, Deedat began reading religious literature to engage in interfaith discussions. His natural eloquence, sharp memory, and study of the Bible and Quran propelled him into public speaking. He co-founded the Islamic Propagation Centre International (IPCI) in Durban, printing millions of copies of books and pamphlets distributed globally free of charge.</p>
+        <div class="modal-bio-section-title">International Debates and Recognition</div>
+        <p>Throughout the 1980s and 1990s, Deedat traveled the world, filling major arenas in the UK, US, Middle East, and Australia for his structured public debates. In 1986, he was awarded the prestigious King Faisal International Prize for Service to Islam, recognizing his dedication to education and interfaith scholarship.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Co-founded the Islamic Propagation Centre International (IPCI) in Durban.</li>
+            <li>Awarded the King Faisal International Prize for Service to Islam in 1986.</li>
+            <li>Published over 20 books and delivered hundreds of globally broadcast lectures.</li>
+            <li>Pioneered comparative religion study structures in South African Muslim circles.</li>
+          </ul>
+        </div>
+      `
+    },
+    'ajum-hossen': {
+      name: 'Ajum Goolam Hossen',
+      tag: 'Diaspora Commerce',
+      era: '1850 – 1919 &bull; Mauritius',
+      img: 'ajum_goolam_hossen.jpg',
+      bio: `
+        <p><strong>Ajum Goolam Hossen</strong> was a prominent Mauritian merchant prince, civic leader, and philanthropist. As one of the leading figures of the Gujarati Muslim diaspora in the Mascarene Islands, he played a foundational role in establishing the economic and social fabric of Muslims in Mauritius.</p>
+        <p>Born in Rander, near Surat in Gujarat, India, he migrated to Port Louis, Mauritius, where he expanded his family's mercantile empire, trading sugar, textiles, and spices across India, East Africa, and Europe.</p>
+        <div class="modal-bio-section-title">Indian Ocean Mercantile Network</div>
+        <p>Hossen's business house, Ajum Goolam Hossen & Co., operated a fleet of merchant vessels and managed large-scale wholesale warehouses. He became a close advisor to the Mauritian colonial administration on trade matters, advocating for the interests of South Asian merchant networks and helping establish Port Louis as a premier trade hub in the Indian Ocean.</p>
+        <div class="modal-bio-section-title">Community Organization</div>
+        <p>Hossen was the primary founder and benefactor of the Sunni Surti Mosque in Port Louis and helped establish the Surti Sunni Muslim Society. He was a champion of Gujarati language preservation, funding schools and providing scholarships for disadvantaged youth, ensuring the diaspora maintained their cultural and educational identity.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Managed a leading Indian Ocean trading house with links from Surat to Port Louis.</li>
+            <li>Benefactor and founder of the Sunni Surti Mosque and schools in Mauritius.</li>
+            <li>Advocated for the civil rights and economic interests of South Asian immigrants.</li>
+            <li>Pioneered Gujarati language instruction and civic societies in the Mascarene Islands.</li>
+          </ul>
+        </div>
+      `
     }
   };
 
