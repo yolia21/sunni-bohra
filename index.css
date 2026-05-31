@@ -634,6 +634,18 @@ body {
   filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
 }
 
+.spotlight-badge-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--gold-metallic);
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+  background: rgba(4, 18, 12, 0.5);
+  object-fit: contain;
+}
+
 .spotlight-badge h4 {
   font-family: var(--font-accent);
   color: var(--gold-metallic);
