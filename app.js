@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Mulla Abdul Ghafur',
       tag: 'Commerce & Shipping',
       era: '17th – 18th Century &bull; Surat',
-      img: 'mulla_abdul_ghafur.png',
+      img: '',
       bio: `
         <p><strong>Mulla Abdul Ghafur</strong> was a legendary merchant prince of Surat in Mughal India. In the late 17th and early 18th centuries, he rose to become one of the wealthiest mercantile magnates in the world, with a personal trading fortune and shipping fleet that rivaled contemporary European trading corporations like the English and Dutch East India Companies.</p>
         <p>Operating during the reign of Mughal Emperor Aurangzeb, Abdul Ghafur owned more than 17 major ocean-going merchant vessels. His ships plied the highly lucrative trade routes between Surat, the Persian Gulf, the Red Sea, and the East African ports, exchanging Gujarati textiles, spices, indigo, and agricultural goods for bullion and coffee.</p>
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ahmed Kathrada',
       tag: 'Political Activism',
       era: '1929 – 2017 &bull; South Africa',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/Kathrada_coons_crop.jpg',
+      img: 'kathrada.jpg',
       bio: `
         <p><strong>Ahmed Mohamed Kathrada</strong> (affectionately known as "Kathy") was an iconic South African anti-apartheid politician, activist, and political prisoner. His lifelong struggle against racial segregation and white minority rule cemented his legacy as a father of modern democratic South Africa.</p>
         <p>Kathrada's roots trace back to the Surti Sunni Bohra community of South Gujarat. His parents migrated from the village of Tadkeshwar in Gujarat to Schweizer-Reneke, a small town in the Transvaal province of South Africa, where Ahmed was born in 1929.</p>
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Mohsin & Zuber Issa',
       tag: 'Global Enterprise',
       era: 'Contemporary &bull; United Kingdom',
-      img: 'issa_brothers.png',
+      img: 'issa_brothers.jpg',
       bio: `
         <p><strong>Mohsin and Zuber Issa</strong> are prominent British self-made billionaire entrepreneurs who revolutionized the global convenience retail and fuel sector. Born to Gujarati Sunni Bohra parents who migrated from Bharuch, Gujarat, to Blackburn, England in the 1960s, the brothers built a global empire from humble beginnings.</p>
         <p>In 2001, they acquired a single derelict petrol station in Bury, Greater Manchester, for £150,000. Through innovative commercial branding, focusing on premium food-to-go options, and partnering with major brand franchises, they grew their venture into the multi-national EG Group.</p>
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Mufti Ismail Menk',
       tag: 'Islamic Scholarship',
       era: 'Contemporary &bull; Zimbabwe',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Ismail_ibn_Musa_Menks_talk_at_Kerala_State_Business_Excellence_Awards_2015.jpg',
+      img: 'mufti_menk.jpg',
       bio: `
         <p><strong>Ismail ibn Musa Menk</strong> (commonly known as Mufti Menk) is a world-renowned Islamic scholar, motivational speaker, and the Grand Mufti of Zimbabwe. With his engaging speaking style, relatable advice, and message of universal peace, he has emerged as one of the most influential Muslim voices globally.</p>
         <p>Mufti Menk belongs to the Gujarati Sunni Vohra diaspora. His family lineage is rooted in the Surat district of Gujarat, India, from where his father migrated to Zimbabwe, establishing community institutions and religious education programs.</p>
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Prof. Sir Alimuddin Zumla',
       tag: 'Medicine & Science',
       era: 'Contemporary &bull; UK / Zambia',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Prof_Alimuddin_Zumla_2.jpg',
+      img: 'sir_alimuddin.jpg',
       bio: `
         <p><strong>Professor Sir Alimuddin Zumla</strong> is an internationally acclaimed professor of infectious diseases and international health at University College London (UCL) and a consultant physician at UCL Hospitals NHS Foundation Trust. His pioneering research in tuberculosis (TB), HIV, and respiratory infections has saved countless lives globally.</p>
         <p>Sir Alimuddin's family roots are in South Gujarat's Sunni Bohra community. His lineage connects directly with the early waves of Gujarati merchants who migrated to East and Central Africa in search of trade and educational opportunities.</p>
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Maulana Ghulam Vastanvi',
       tag: 'Modern Education',
       era: 'Contemporary &bull; India',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Ghulam_Mohammad_Vastanvi.jpg',
+      img: 'ghulam_vastanvi.jpg',
       bio: `
         <p><strong>Maulana Ghulam Mohammad Vastanvi</strong> is a prominent Indian Islamic scholar, progressive educationist, and social reformer. He is famous for establishing the Jamia Islamia Ishaatul Uloom educational network in Akkalkuwa, Maharashtra, which pioneered a revolutionary integration of traditional seminary learning with modern science and professional degrees.</p>
         <p>He is a notable figure within the Charotar and Surti Sunni Vohra intellectual circles, representing the community's traditional dedication to community welfare, institutional charity, and progressive development.</p>
@@ -481,10 +481,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = biographyData[id];
     if (!data) return;
 
+    let imageHtml = '';
+    if (data.img) {
+      imageHtml = `<img class="modal-profile-img" src="${data.img}" alt="${data.name}">`;
+    } else {
+      imageHtml = `
+        <div class="modal-profile-img-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-metallic)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
+            <circle cx="12" cy="5" r="3" />
+            <line x1="12" y1="8" x2="12" y2="20" />
+            <line x1="6" y1="12" x2="18" y2="12" />
+            <path d="M5 12a7 7 0 0 0 14 0" />
+          </svg>
+        </div>
+      `;
+    }
+
     // Inject Content
     modalBody.innerHTML = `
       <div class="modal-profile-header">
-        <img class="modal-profile-img" src="${data.img}" alt="${data.name}">
+        ${imageHtml}
         <div class="modal-profile-title-container">
           <span class="modal-profile-tag">${data.tag}</span>
           <h2 class="modal-profile-name">${data.name}</h2>
