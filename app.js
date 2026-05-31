@@ -324,6 +324,208 @@ document.addEventListener('DOMContentLoaded', () => {
 
   restartBtn.addEventListener('click', initQuiz);
 
+  // ==========================================================================
+  // LUMINARY MODAL & BIOGRAPHY DATABASE
+  // ==========================================================================
+  const biographyData = {
+    'abdul-ghafur': {
+      name: 'Mulla Abdul Ghafur',
+      tag: 'Commerce & Shipping',
+      era: '17th – 18th Century &bull; Surat',
+      img: 'mulla_abdul_ghafur.png',
+      bio: `
+        <p><strong>Mulla Abdul Ghafur</strong> was a legendary merchant prince of Surat in Mughal India. In the late 17th and early 18th centuries, he rose to become one of the wealthiest mercantile magnates in the world, with a personal trading fortune and shipping fleet that rivaled contemporary European trading corporations like the English and Dutch East India Companies.</p>
+        <p>Operating during the reign of Mughal Emperor Aurangzeb, Abdul Ghafur owned more than 17 major ocean-going merchant vessels. His ships plied the highly lucrative trade routes between Surat, the Persian Gulf, the Red Sea, and the East African ports, exchanging Gujarati textiles, spices, indigo, and agricultural goods for bullion and coffee.</p>
+        <div class="modal-bio-section-title">Rise to Influence</div>
+        <p>Ghafur hailed from the Sunni Bohra (Vohra) mercantile community of South Gujarat. Under his leadership, the port city of Surat became a global trade powerhouse. He leveraged his vast wealth to establish political independence, often negotiating directly with Mughal officials, local governors, and European traders on equal terms. His sheer volume of trade allowed him to influence local markets, control commodity pricing, and finance smaller Gujarati merchants.</p>
+        <div class="modal-bio-section-title">Defying European Monopolies</div>
+        <p>When European pirates and privateers harassed Indian vessels in the Arabian Sea, Abdul Ghafur led coalitions of native merchants to demand protection from the Mughal administration. He pressured the Mughal authorities to force the English, French, and Dutch companies to sign convoy security pacts, safeguarding Indian ships from piracy and European aggression.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Constructed a personal fleet of over 17 large-capacity merchant ships.</li>
+            <li>Amassed a legendary fortune estimated in millions of rupees (billions in modern terms).</li>
+            <li>Led resistance against European naval blockades, protecting Gujarati maritime autonomy.</li>
+            <li>Established Surat as the leading mercantile port of the Mughal Empire.</li>
+          </ul>
+        </div>
+      `
+    },
+    'kathrada': {
+      name: 'Ahmed Kathrada',
+      tag: 'Political Activism',
+      era: '1929 – 2017 &bull; South Africa',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/Kathrada_coons_crop.jpg',
+      bio: `
+        <p><strong>Ahmed Mohamed Kathrada</strong> (affectionately known as "Kathy") was an iconic South African anti-apartheid politician, activist, and political prisoner. His lifelong struggle against racial segregation and white minority rule cemented his legacy as a father of modern democratic South Africa.</p>
+        <p>Kathrada's roots trace back to the Surti Sunni Bohra community of South Gujarat. His parents migrated from the village of Tadkeshwar in Gujarat to Schweizer-Reneke, a small town in the Transvaal province of South Africa, where Ahmed was born in 1929.</p>
+        <div class="modal-bio-section-title">The Rivonia Trial & Robben Island</div>
+        <p>From the early age of 12, Kathrada dedicated his life to political activism. He rose through the ranks of the Transvaal Indian Congress and the African National Congress (ANC), coordinating multi-racial resistance alongside Nelson Mandela, Walter Sisulu, and Joe Slovo. In 1963, he was arrested at Liliesleaf Farm during a police raid and put on trial for sabotage and attempting to overthrow the government in the historic Rivonia Trial.</p>
+        <p>Sentenced to life imprisonment with hard labor, he spent 26 years and 3 months behind bars, with 18 of those years served on the notorious Robben Island. While imprisoned, he completed four university degrees in history, politics, bibliography, and African literature, proving to be an intellectual anchor for his fellow political prisoners.</p>
+        <div class="modal-bio-section-title">Democratic Leadership</div>
+        <p>Following his release in October 1989, Kathrada was elected to South Africa's first democratic parliament in 1994. He served as the Parliamentary Counsellor to President Nelson Mandela and was appointed chairperson of the Robben Island Museum Council. In 2008, he launched the Ahmed Kathrada Foundation to combat racism and promote non-racial human rights.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Co-organized the 1952 Defiance Campaign against unjust apartheid laws.</li>
+            <li>Rivonia Trialist sentenced to life imprisonment alongside Nelson Mandela.</li>
+            <li>Served as Parliamentary Counsellor to South Africa's first democratic president.</li>
+            <li>Awarded the 'Isitwalandwe/Seaparankoe'—the ANC's highest honor for service.</li>
+          </ul>
+        </div>
+      `
+    },
+    'issa-brothers': {
+      name: 'Mohsin & Zuber Issa',
+      tag: 'Global Enterprise',
+      era: 'Contemporary &bull; United Kingdom',
+      img: 'issa_brothers.png',
+      bio: `
+        <p><strong>Mohsin and Zuber Issa</strong> are prominent British self-made billionaire entrepreneurs who revolutionized the global convenience retail and fuel sector. Born to Gujarati Sunni Bohra parents who migrated from Bharuch, Gujarat, to Blackburn, England in the 1960s, the brothers built a global empire from humble beginnings.</p>
+        <p>In 2001, they acquired a single derelict petrol station in Bury, Greater Manchester, for £150,000. Through innovative commercial branding, focusing on premium food-to-go options, and partnering with major brand franchises, they grew their venture into the multi-national EG Group.</p>
+        <div class="modal-bio-section-title">Creating the EG Group</div>
+        <p>The Issa brothers pioneered a new model for service stations, transforming them from simple fuel stops into convenience retail hubs. By partnering with leading brands like Starbucks, Subway, Burger King, and Greggs, they maximized customer footfall and retail margins. Today, the EG Group operates over 6,600 locations across the United Kingdom, Europe, the United States, and Australia, employing over 50,000 people.</p>
+        <div class="modal-bio-section-title">Acquisition of ASDA</div>
+        <p>In 2020, in partnership with private equity firm TDR Capital, the Issa brothers made headlines globally by acquiring a majority stake in ASDA, one of the UK's "Big Four" supermarket chains, from Walmart in a landmark transaction valued at £6.8 billion. This acquisition represented the return of ASDA to British ownership for the first time in 21 years and positioned the brothers at the absolute peak of British retail enterprise.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Built the EG Group from a single station to a global 6,600+ location empire.</li>
+            <li>Acquired British supermarket giant ASDA in a historic £6.8B transaction.</li>
+            <li>Recognized as Officers of the Order of the British Empire (OBE) in 2020.</li>
+            <li>Pioneered modern convenience retail integration within fuel stations.</li>
+          </ul>
+        </div>
+      `
+    },
+    'mufti-menk': {
+      name: 'Mufti Ismail Menk',
+      tag: 'Islamic Scholarship',
+      era: 'Contemporary &bull; Zimbabwe',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Ismail_ibn_Musa_Menks_talk_at_Kerala_State_Business_Excellence_Awards_2015.jpg',
+      bio: `
+        <p><strong>Ismail ibn Musa Menk</strong> (commonly known as Mufti Menk) is a world-renowned Islamic scholar, motivational speaker, and the Grand Mufti of Zimbabwe. With his engaging speaking style, relatable advice, and message of universal peace, he has emerged as one of the most influential Muslim voices globally.</p>
+        <p>Mufti Menk belongs to the Gujarati Sunni Vohra diaspora. His family lineage is rooted in the Surat district of Gujarat, India, from where his father migrated to Zimbabwe, establishing community institutions and religious education programs.</p>
+        <div class="modal-bio-section-title">Education and Training</div>
+        <p>He completed his initial schooling and memorized the Quran under the guidance of his father, Maulana Musa Menk. He then pursued higher studies in Sharia (Islamic Law) at the Islamic University of Madinah in Saudi Arabia. Following this, he specialized in Hanafi jurisprudence (Ifta) at the Darul Uloom Kantharia seminary in Gujarat, India, connecting him directly with the traditional intellectual heritage of his ancestors.</p>
+        <div class="modal-bio-section-title">Global Impact and Outreach</div>
+        <p>As the head of the Fatwa Department for the Council of Islamic Scholars of Zimbabwe (Majlisul Ulama Zimbabwe), Mufti Menk manages local religious administration. However, his primary impact is global: utilizing social media, YouTube, and podcasts, he reaches tens of millions of viewers worldwide. He was named one of the 500 Most Influential Muslims in the world every year since 2010 by the Royal Islamic Strategic Studies Centre.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Appointed Grand Mufti of Zimbabwe and Head of the Majlisul Ulama Fatwa Department.</li>
+            <li>Recipient of the Global Leadership Award in Social Guidance (2015).</li>
+            <li>Reaches over 20 million followers across digital platforms.</li>
+            <li>Prominent global advocate for interfaith harmony, peace, and anti-extremism.</li>
+          </ul>
+        </div>
+      `
+    },
+    'sir-alimuddin': {
+      name: 'Prof. Sir Alimuddin Zumla',
+      tag: 'Medicine & Science',
+      era: 'Contemporary &bull; UK / Zambia',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Prof_Alimuddin_Zumla_2.jpg',
+      bio: `
+        <p><strong>Professor Sir Alimuddin Zumla</strong> is an internationally acclaimed professor of infectious diseases and international health at University College London (UCL) and a consultant physician at UCL Hospitals NHS Foundation Trust. His pioneering research in tuberculosis (TB), HIV, and respiratory infections has saved countless lives globally.</p>
+        <p>Sir Alimuddin's family roots are in South Gujarat's Sunni Bohra community. His lineage connects directly with the early waves of Gujarati merchants who migrated to East and Central Africa in search of trade and educational opportunities.</p>
+        <div class="modal-bio-section-title">Scientific Achievements</div>
+        <p>Professor Zumla is globally recognized for his work in clinical trial research, epidemiology, and diagnostics. He has published over 650 peer-reviewed scientific articles and edited 22 medical textbooks. His research has shaped international guidelines for treating coinfections of HIV and Tuberculosis, particularly in Sub-Saharan Africa and Asia.</p>
+        <div class="modal-bio-section-title">Knighthood and Global Awards</div>
+        <p>In the 2017 New Year Honours, he was knighted by Queen Elizabeth II for services to global health and infectious diseases. He has also received numerous awards, including the Royal Society of Tropical Medicine and Hygiene's Chalmers Memorial Medal, the World Health Organization's Stop TB Partnership Award, and the Grand Commander of the Order of the Distinguished Services (Zambia's highest civil honor).</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Knighted by Queen Elizabeth II in 2017 for services to Global Health.</li>
+            <li>Published over 650 research articles and edited 22 major medical textbooks.</li>
+            <li>Recipient of the WHO Stop TB Partnership Koch Landouzy Award.</li>
+            <li>Pioneered dual HIV-TB drug combination trials saving millions of lives.</li>
+          </ul>
+        </div>
+      `
+    },
+    'vastanvi': {
+      name: 'Maulana Ghulam Vastanvi',
+      tag: 'Modern Education',
+      era: 'Contemporary &bull; India',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Ghulam_Mohammad_Vastanvi.jpg',
+      bio: `
+        <p><strong>Maulana Ghulam Mohammad Vastanvi</strong> is a prominent Indian Islamic scholar, progressive educationist, and social reformer. He is famous for establishing the Jamia Islamia Ishaatul Uloom educational network in Akkalkuwa, Maharashtra, which pioneered a revolutionary integration of traditional seminary learning with modern science and professional degrees.</p>
+        <p>He is a notable figure within the Charotar and Surti Sunni Vohra intellectual circles, representing the community's traditional dedication to community welfare, institutional charity, and progressive development.</p>
+        <div class="modal-bio-section-title">The Akkalkuwa Educational Revolution</div>
+        <p>In 1979, Ghulam Vastanvi founded a small school in Akkalkuwa, a remote, tribal-dominated village in Maharashtra. Recognizing that religious education alone could limit students' livelihood options, he introduced a curriculum combining Quranic studies with computer science, mathematics, and English. Over the decades, this grew into a massive network hosting over 200,000 students across multiple campuses.</p>
+        <p>Today, the Jamia network includes government-recognized engineering colleges, medical colleges, pharmacy institutes, and nursing academies, allowing students from poor and minority backgrounds to qualify as doctors, software engineers, and pharmacists while retaining their cultural roots.</p>
+        <div class="modal-bio-section-title">Social Reform & Leadership</div>
+        <p>Vastanvi briefly served as the rector of the Darul Uloom Deoband in 2011, where he advocated for expanding the curriculum of traditional madrasas to include technical training. His work continues to inspire educators across South Asia, demonstrating how traditional communities can adapt to the modern global economy.</p>
+        <div class="modal-bio-highlights">
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Founded the Jamia Islamia Ishaatul Uloom network educating over 200,000 students.</li>
+            <li>Established India's first modern medical and engineering colleges run by a traditional seminary.</li>
+            <li>Pioneered reform of madrasa curricula, integrating IT, science, and medicine.</li>
+            <li>Recipient of multiple educational and humanitarian awards across India.</li>
+          </ul>
+        </div>
+      `
+    }
+  };
+
+  // Modal Selectors
+  const modal = document.getElementById('luminary-modal');
+  const modalBody = document.getElementById('luminary-modal-body');
+  const modalClose = document.getElementById('luminary-modal-close');
+  const modalOverlay = document.getElementById('luminary-modal-overlay');
+  const luminaryCards = document.querySelectorAll('.luminary-card');
+
+  function openLuminaryModal(id) {
+    const data = biographyData[id];
+    if (!data) return;
+
+    // Inject Content
+    modalBody.innerHTML = `
+      <div class="modal-profile-header">
+        <img class="modal-profile-img" src="${data.img}" alt="${data.name}">
+        <div class="modal-profile-title-container">
+          <span class="modal-profile-tag">${data.tag}</span>
+          <h2 class="modal-profile-name">${data.name}</h2>
+          <span class="modal-profile-era">${data.era}</span>
+        </div>
+      </div>
+      <div class="modal-bio-content">
+        ${data.bio}
+      </div>
+    `;
+
+    // Show Modal
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Stop background scroll
+  }
+
+  function closeLuminaryModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // Restore scroll
+  }
+
+  // Event Listeners
+  luminaryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.getAttribute('data-luminary');
+      openLuminaryModal(key);
+    });
+  });
+
+  modalClose.addEventListener('click', closeLuminaryModal);
+  modalOverlay.addEventListener('click', closeLuminaryModal);
+
+  // Close on Escape Key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeLuminaryModal();
+    }
+  });
+
   // Start the quiz
   initQuiz();
 });

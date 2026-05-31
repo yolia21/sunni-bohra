@@ -1341,7 +1341,7 @@ body {
   background: linear-gradient(135deg, rgba(8, 26, 18, 0.7) 0%, rgba(4, 18, 12, 0.85) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 15px;
-  padding: 2.5rem 2rem 2rem 2rem;
+  padding: 1.5rem;
   position: relative;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   backdrop-filter: blur(8px);
@@ -1350,6 +1350,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 .luminary-card::before {
@@ -1368,38 +1369,82 @@ body {
 .luminary-card:hover {
   transform: translateY(-8px);
   border-color: var(--gold-metallic);
-  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
 }
 
 .luminary-card:hover::before {
   opacity: 1;
 }
 
+.luminary-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.luminary-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.8);
+}
+
+.luminary-card:hover .luminary-card-img {
+  transform: scale(1.05);
+  filter: brightness(0.95);
+}
+
 .luminary-badge-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background: rgba(212, 175, 55, 0.1);
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(4, 18, 12, 0.85);
   border: 1px solid var(--gold-metallic);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
   transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .luminary-badge-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .luminary-card:hover .luminary-badge-icon {
   background: var(--gold-metallic);
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .luminary-card:hover .luminary-badge-icon svg {
   stroke: var(--charcoal-bg);
+}
+
+.luminary-read-more {
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  color: var(--gold-metallic);
+  margin-top: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.luminary-card:hover .luminary-read-more {
+  color: var(--gold-glow);
+  transform: translateX(4px);
 }
 
 .luminary-tag {
@@ -1593,6 +1638,191 @@ body {
   }
 
   .luminary-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   LUMINARY MODAL STYLING
+   ========================================================================== */
+
+.luminary-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.luminary-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.luminary-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 16, 10, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.luminary-modal-card {
+  position: relative;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  background: linear-gradient(135deg, rgba(8, 26, 18, 0.95) 0%, rgba(4, 18, 12, 0.98) 100%);
+  border: 1.5px solid var(--gold-metallic);
+  border-radius: 20px;
+  padding: 3rem;
+  z-index: 10;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.luminary-modal.active .luminary-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.luminary-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: rgba(245, 242, 235, 0.6);
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: var(--transition-smooth);
+}
+
+.luminary-modal-close:hover {
+  color: var(--gold-metallic);
+  transform: rotate(90deg);
+}
+
+/* Modal Content Injected Styling */
+.modal-profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.modal-profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  border: 2px solid var(--gold-metallic);
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  background: rgba(4, 18, 12, 0.5);
+}
+
+.modal-profile-title-container {
+  flex: 1;
+}
+
+.modal-profile-tag {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--gold-metallic);
+}
+
+.modal-profile-name {
+  font-family: var(--font-title);
+  color: var(--marble-cream);
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.modal-profile-era {
+  font-size: 0.85rem;
+  color: var(--gold-glow);
+  font-weight: 500;
+}
+
+.modal-bio-content {
+  color: rgba(245, 242, 235, 0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.modal-bio-content p {
+  margin-bottom: 1.25rem;
+}
+
+.modal-bio-section-title {
+  font-family: var(--font-title);
+  color: var(--gold-metallic);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.75rem 0;
+  border-left: 2px solid var(--ruby-accent);
+  padding-left: 0.75rem;
+}
+
+.modal-bio-highlights {
+  background: rgba(212, 175, 55, 0.04);
+  border-left: 3px solid var(--gold-metallic);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.modal-bio-highlights h4 {
+  font-family: var(--font-title);
+  color: var(--gold-metallic);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-bio-highlights ul {
+  list-style: none;
+}
+
+.modal-bio-highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--marble-cream);
+}
+
+.modal-bio-highlights li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold-metallic);
+}
+
+@media (max-width: 600px) {
+  .modal-profile-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .luminary-modal-card {
     padding: 2rem 1.5rem;
   }
 }
