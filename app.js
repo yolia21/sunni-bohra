@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Mulla Abdul Ghafur',
       tag: 'Commerce & Shipping',
       era: '17th – 18th Century &bull; Surat',
-      img: '',
+      img: 'mulla_abdul_ghafur.jpg',
       bio: `
         <p><strong>Mulla Abdul Ghafur</strong> was a legendary merchant prince of Surat in Mughal India. In the late 17th and early 18th centuries, he rose to become one of the wealthiest mercantile magnates in the world, with a personal trading fortune and shipping fleet that rivaled contemporary European trading corporations like the English and Dutch East India Companies.</p>
         <p>Operating during the reign of Mughal Emperor Aurangzeb, Abdul Ghafur owned more than 17 major ocean-going merchant vessels. His ships plied the highly lucrative trade routes between Surat, the Persian Gulf, the Red Sea, and the East African ports, exchanging Gujarati textiles, spices, indigo, and agricultural goods for bullion and coffee.</p>
