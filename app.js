@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Major Amode Ibrahim Atchia',
       tag: 'Innovation & Philanthropy',
       era: '1860 – 1947 &bull; Mauritius',
-      img: 'major_atchia.jpg',
+      img: 'amodeatchia.jpg',
       bio: `
         <p><strong>Major Amode Ibrahim Atchia</strong> (also known as Major Atchia) was a legendary Mauritian pioneer, inventor, and philanthropist. He is celebrated as one of Mauritius's greatest historical figures of industrial innovation, bringing hydro-electric power and advanced technology to the Indian Ocean island nation.</p>
         <p>Atchia's ancestors were Surti Sunni Bohras who migrated from the Surat district of South Gujarat to Mauritius in the 19th century, establishing a prominent trading family in Rose-Hill.</p>
@@ -541,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Ajum Goolam Hossen',
       tag: 'Diaspora Commerce',
       era: '1850 – 1919 &bull; Mauritius',
-      img: 'ajum_goolam_hossen.png',
+      img: 'ajum_goolam_hossen_and_co.png',
       bio: `
         <p><strong>Ajum Goolam Hossen</strong> was a prominent Mauritian merchant prince, civic leader, and philanthropist. As one of the leading figures of the Gujarati Muslim diaspora in the Mascarene Islands, he played a foundational role in establishing the economic and social fabric of Muslims in Mauritius.</p>
         <p>Born in Rander, near Surat in Gujarat, India, he migrated to Port Louis, Mauritius, where he expanded his family's mercantile empire, trading sugar, textiles, and spices across India, East Africa, and Europe.</p>
