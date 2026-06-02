@@ -902,11 +902,12 @@ body {
 
 .map-container {
   width: 100%;
+  height: 500px;
   position: relative;
   border-radius: 20px;
   border: 1px solid var(--gold-metallic);
   background: radial-gradient(circle at center, var(--emerald-mid) 0%, var(--emerald-deep) 100%);
-  padding: 2rem;
+  padding: 0;
   overflow: hidden;
   box-shadow: inset 0 0 50px rgba(0,0,0,0.6);
 }

@@ -1000,7 +1000,7 @@ export default function Home() {
 
         <div className="map-section-wrapper">
           {/* Dynamically imported React Leaflet Map */}
-          <div className="map-container" style={{ position: 'relative', minHeight: '500px', flex: 1.2 }}>
+          <div className="map-container" style={{ position: 'relative', height: '500px', flex: 1.2 }}>
             <DiasporaMap 
               selectedCountry={selectedCountry}
               onSelectCountry={setSelectedCountry}
