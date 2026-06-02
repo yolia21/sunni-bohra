@@ -56,7 +56,11 @@ const coordinates = {
   malaysia: [3.14, 101.69],
   indonesia: [-6.21, 106.85],
   mauritius: [-20.16, 57.50],
-  reunion: [-20.88, 55.45]
+  reunion: [-20.88, 55.45],
+  zambia: [-15.42, 28.28],
+  australia: [-33.87, 151.21],
+  uae: [25.20, 55.27],
+  thailand: [13.76, 100.50]
 };
 
 // Era 1 Routes: Medieval Convergence to Gujarat (solid Gold lines #D4AF37)
@@ -88,7 +92,15 @@ const era2Routes = [
   // Southeast Asia: Gujarat ➔ Malaysia ➔ Indonesia
   [coordinates.surat, [10.0, 85.0], coordinates.malaysia, coordinates.indonesia],
   // Southern Indian Ocean: Gujarat ➔ Mauritius ➔ Reunion
-  [coordinates.surat, [5.0, 65.0], [-10.0, 60.0], coordinates.mauritius, coordinates.reunion]
+  [coordinates.surat, [5.0, 65.0], [-10.0, 60.0], coordinates.mauritius, coordinates.reunion],
+  // Central Africa: Gujarat ➔ Mombasa ➔ Zambia
+  [coordinates.surat, [5.0, 60.0], coordinates.mombasa, coordinates.zambia],
+  // Oceania: Gujarat ➔ Malaysia ➔ Australia
+  [coordinates.surat, [10.0, 85.0], coordinates.malaysia, coordinates.australia],
+  // Gulf Region: Gujarat ➔ UAE
+  [coordinates.surat, coordinates.uae],
+  // Southeast Asia Secondary: Gujarat ➔ Thailand
+  [coordinates.surat, coordinates.thailand]
 ];
 
 export default function DiasporaMap({ selectedCountry, onSelectCountry }) {
@@ -334,6 +346,66 @@ export default function DiasporaMap({ selectedCountry, onSelectCountry }) {
             <div className="map-popup-content">
               <strong>Reunion Island</strong>
               <p>Establishment of influential wholesale, retail, and real estate estates by Surti Sunni Vohras.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.zambia} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('zambia')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Zambia</strong>
+              <p>Trading and manufacturing settlements in Lusaka, Chipata, and the Copperbelt region.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.australia} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('australia')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Australia</strong>
+              <p>Thriving modern professional diaspora networks across Sydney, Melbourne, and Brisbane.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.uae} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('uae')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>United Arab Emirates (Dubai)</strong>
+              <p>Prominent hub of modern traders, professionals, and corporate executives in the Gulf.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.thailand} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('thailand')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Thailand (Bangkok)</strong>
+              <p>19th-20th century Surti gem trading and wholesale businesses near the Chao Phraya River.</p>
             </div>
           </Popup>
         </Marker>

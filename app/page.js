@@ -314,6 +314,30 @@ const diasporaData = {
     region: 'Reunion Island',
     stat: '15,000+',
     desc: 'A significant diaspora of Surti Sunni Bohras settled in the French overseas department of Reunion Island starting in the late 19th century. Known locally as "Zarabes," they established successful retail, wholesale, and real estate enterprises, building beautiful landmarks like the Noor-e-Islam Mosque in Saint-Denis.'
+  },
+  zambia: {
+    country: 'CENTRAL AFRICA',
+    region: 'Zambia',
+    stat: '8,000+',
+    desc: 'Gujarati Sunni Vohra merchants settled in Lusaka, Chipata, and the Copperbelt region in the 20th century. Operating retail, agriculture, and manufacturing businesses, they established strong community associations and built mosques and educational centers.'
+  },
+  australia: {
+    country: 'OCEANIA',
+    region: 'Australia',
+    stat: '12,000+',
+    desc: 'A modern diaspora of professionals, engineers, IT experts, and business owners who settled in Sydney, Melbourne, Brisbane, and Perth. The community actively organizes cultural gatherings, preserves traditional heritage, and connects families across Oceania.'
+  },
+  uae: {
+    country: 'MIDDLE EAST',
+    region: 'United Arab Emirates',
+    stat: '30,000+',
+    desc: 'Beginning in the mid-20th century, a large community of Sunni Bohras settled in Dubai, Sharjah, and Abu Dhabi. Functioning as key professionals, traders, and entrepreneurs, they represent a highly active and integrated modern diaspora hub in the Gulf.'
+  },
+  thailand: {
+    country: 'SOUTHEAST ASIA',
+    region: 'Thailand',
+    stat: '6,000+',
+    desc: 'Establishing connections in the late 19th century, Sunni Bohra gem merchants and wholesale importers settled in Bangkok along the Chao Phraya River. They established the historic Surti Sunni Masjid in Bangkok, maintaining active commerce and social networks.'
   }
 };
 
