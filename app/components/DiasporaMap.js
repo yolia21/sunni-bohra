@@ -52,7 +52,11 @@ const coordinates = {
   johannesburg: [-26.2, 28.0],
   durban: [-29.85, 31.0],
   uk: [53.5, -1.5],
-  canada: [43.65, -79.38]
+  canada: [43.65, -79.38],
+  malaysia: [3.14, 101.69],
+  indonesia: [-6.21, 106.85],
+  mauritius: [-20.16, 57.50],
+  reunion: [-20.88, 55.45]
 };
 
 // Era 1 Routes: Medieval Convergence to Gujarat (solid Gold lines #D4AF37)
@@ -80,7 +84,11 @@ const era2Routes = [
   // Western Migration: Gujarat / Karachi ➔ UK ➔ North America
   [coordinates.surat, [30.0, 45.0], [45.0, 15.0], coordinates.uk],
   [coordinates.karachi, [30.0, 45.0], [45.0, 15.0], coordinates.uk],
-  [coordinates.uk, [50.0, -40.0], coordinates.canada]
+  [coordinates.uk, [50.0, -40.0], coordinates.canada],
+  // Southeast Asia: Gujarat ➔ Malaysia ➔ Indonesia
+  [coordinates.surat, [10.0, 85.0], coordinates.malaysia, coordinates.indonesia],
+  // Southern Indian Ocean: Gujarat ➔ Mauritius ➔ Reunion
+  [coordinates.surat, [5.0, 65.0], [-10.0, 60.0], coordinates.mauritius, coordinates.reunion]
 ];
 
 export default function DiasporaMap({ selectedCountry, onSelectCountry }) {
@@ -266,6 +274,66 @@ export default function DiasporaMap({ selectedCountry, onSelectCountry }) {
             <div className="map-popup-content">
               <strong>North America (Canada & United States)</strong>
               <p>Modern professional and academic diaspora networks.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.malaysia} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('malaysia')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Malaysia</strong>
+              <p>Textile, spice, and wholesale shipping settlements in Penang, Malacca, and Kuala Lumpur.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.indonesia} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('indonesia')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Indonesia</strong>
+              <p>Gujarati merchant houses in Batavia (Jakarta), Surabaya, and Sumatra port cities.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.mauritius} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('mauritius')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Mauritius (Port Louis)</strong>
+              <p>Prominent 19th-century Surti Sunni merchants and founders of the Surti Mosque.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker 
+          position={coordinates.reunion} 
+          icon={customIcon('marker-crimson')}
+          eventHandlers={{
+            click: () => onSelectCountry('reunion')
+          }}
+        >
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Reunion Island</strong>
+              <p>Establishment of influential wholesale, retail, and real estate estates by Surti Sunni Vohras.</p>
             </div>
           </Popup>
         </Marker>

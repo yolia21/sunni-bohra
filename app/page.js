@@ -290,6 +290,30 @@ const diasporaData = {
     region: 'Pakistan',
     stat: '100,000+',
     desc: 'Following the 1947 Partition, a large portion of Patani/Jafari Bohras, alongside Surti traders, migrated to Karachi and Sindh. Establishing the Sunni Bohra Jamat Karachi, they entered sectors like textile manufacturing, wholesale trade, and chemicals, forming a highly influential mercantile class in the commercial capital of Pakistan.'
+  },
+  malaysia: {
+    country: 'SOUTHEAST ASIA',
+    region: 'Malaysia',
+    stat: '15,000+',
+    desc: 'Sunni Bohra/Vohra merchants from Surat, Rander, and Bharuch migrated along Indian Ocean routes to British Malaya in the 19th and 20th centuries. Establishing successful textile, shipping, and spice importing houses in Penang, Malacca, and Kuala Lumpur, they contributed significantly to local South Asian Muslim community networks.'
+  },
+  indonesia: {
+    country: 'SOUTHEAST ASIA',
+    region: 'Indonesia',
+    stat: '10,000+',
+    desc: 'Gujarati Sunni Bohra merchants established trading houses in Dutch East Indies ports like Batavia (Jakarta), Surabaya, and Medan. Active in textile distribution, spice trade, and international shipping, the community maintained close connections with Southeast Asian mercantile networks.'
+  },
+  mauritius: {
+    country: 'MASCARENE ISLANDS',
+    region: 'Mauritius',
+    stat: '12,000+',
+    desc: 'Arriving in the 19th century, Surti Sunni Bohra merchants became prominent business leaders in Port Louis. They funded the construction of the Sunni Surti Masjid and local educational trusts, playing a major role in the Mascarene Islands\' commercial import-export trade.'
+  },
+  reunion: {
+    country: 'FRENCH INDIAN OCEAN',
+    region: 'Reunion Island',
+    stat: '15,000+',
+    desc: 'A significant diaspora of Surti Sunni Bohras settled in the French overseas department of Reunion Island starting in the late 19th century. Known locally as "Zarabes," they established successful retail, wholesale, and real estate enterprises, building beautiful landmarks like the Noor-e-Islam Mosque in Saint-Denis.'
   }
 };
 
