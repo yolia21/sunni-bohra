@@ -33,6 +33,9 @@ const epicenterIcon = L.divIcon({
 const coordinates = {
   // Era 1 Nodes
   hejazYemen: [16.5, 44.0],
+  levant: [33.5, 36.3],
+  kufa: [32.03, 44.40],
+  iran: [29.0, 53.0],
   arabianSea: [16.0, 63.0],
   cambay: [22.3, 72.6],
   surat: [21.17, 72.83],
@@ -57,7 +60,13 @@ const era1Routes = [
   // Route A: Hejaz / Yemen ➔ Arabian Sea ➔ Cambay ➔ Surat
   [coordinates.hejazYemen, coordinates.arabianSea, coordinates.cambay, coordinates.surat],
   // Route B: Central Asia ➔ Delhi ➔ Ahmedabad ➔ Bharuch
-  [coordinates.centralAsia, coordinates.delhi, coordinates.ahmedabad, coordinates.bharuch]
+  [coordinates.centralAsia, coordinates.delhi, coordinates.ahmedabad, coordinates.bharuch],
+  // Route C: Levant ➔ Hejaz ➔ Arabian Sea ➔ Surat
+  [coordinates.levant, [24.0, 39.0], coordinates.hejazYemen, coordinates.arabianSea, coordinates.surat],
+  // Route D: Kufa ➔ Persian Gulf ➔ Strait of Hormuz ➔ Arabian Sea ➔ Surat
+  [coordinates.kufa, [28.0, 50.0], [26.0, 56.0], coordinates.arabianSea, coordinates.surat],
+  // Route E: Iran (Nawayat) ➔ Strait of Hormuz ➔ Arabian Sea ➔ Surat
+  [coordinates.iran, [26.0, 56.0], coordinates.arabianSea, coordinates.surat]
 ];
 
 // Era 2 Routes: The Modern Global Diaspora (dashed Crimson lines #991B1B radiating from Gujarat)
@@ -114,6 +123,33 @@ export default function DiasporaMap({ selectedCountry, onSelectCountry }) {
             <div className="map-popup-content">
               <strong>Hejaz & Yemen</strong>
               <p>Historical origin of Fatimid-Musta'li missionaries migrating across the Arabian Sea.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={coordinates.levant} icon={customIcon('marker-gold')}>
+          <Popup>
+            <div className="map-popup-content">
+              <strong>The Levant</strong>
+              <p>Medieval migrations of scholars and merchants fleeing regional conflicts to find sanctuary in Gujarat.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={coordinates.kufa} icon={customIcon('marker-gold')}>
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Kufa, Iraq</strong>
+              <p>Early Alid and Hashimite migrations escaping Umayyad and Abbasid persecution, settling along the western coast of India.</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={coordinates.iran} icon={customIcon('marker-gold')}>
+          <Popup>
+            <div className="map-popup-content">
+              <strong>Iran (Nawayat Migration)</strong>
+              <p>Nawayat community migrations fleeing political turmoil in Persia via maritime routes to Gujarat and the Konkan coast.</p>
             </div>
           </Popup>
         </Marker>
